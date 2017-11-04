@@ -1,1 +1,7 @@
-<mat-checkbox>Subscribe fuckers!</mat-checkbox>
+<mat-checkbox
+  #showDetails
+  [value]="2"
+  [checked]="isChecked"
+  (change)="onChange($event)">Subscribe fuckers!</mat-checkbox>
+
+<div *ngIf="showDetails.checked">Some details ...</div>
