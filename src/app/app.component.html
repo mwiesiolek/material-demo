@@ -3,7 +3,8 @@
     #showDetails
     [value]="2"
     [checked]="isChecked"
-    (change)="onChange($event)">Subscribe fuckers!</mat-checkbox>
+    (change)="onChange($event)">Subscribe fuckers!
+  </mat-checkbox>
 
   <div *ngIf="showDetails.checked">Some details ...</div>
 
@@ -20,6 +21,28 @@
   <mat-select [(ngModel)]="color">
     <mat-option
       *ngFor="let item of items"
-      [value]="item.id">{{ item.title }}</mat-option>
+      [value]="item.id">{{ item.title }}
+    </mat-option>
   </mat-select>
+</div>
+
+<div>
+  <form class="full-width">
+    <mat-form-field class="full-width">
+      <input
+        ngModel
+        name="username"
+        type="text"
+        matInput
+        required
+        placeholder="Favorite food"
+        value="Sushi" />
+      <mat-hint>Tell me about your favorite food you little shit!</mat-hint>
+      <span matSuffix>@gmail.com</span>
+      <span matPrefix>master.maks.</span>
+      <mat-error>
+        Field is required fuckers!
+      </mat-error>
+    </mat-form-field>
+  </form>
 </div>
