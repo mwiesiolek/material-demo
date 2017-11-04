@@ -1,7 +1,17 @@
-<mat-checkbox
-  #showDetails
-  [value]="2"
-  [checked]="isChecked"
-  (change)="onChange($event)">Subscribe fuckers!</mat-checkbox>
+<div>
+  <mat-checkbox
+    #showDetails
+    [value]="2"
+    [checked]="isChecked"
+    (change)="onChange($event)">Subscribe fuckers!</mat-checkbox>
 
-<div *ngIf="showDetails.checked">Some details ...</div>
+  <div *ngIf="showDetails.checked">Some details ...</div>
+
+</div>
+
+<div>
+  <mat-radio-group>
+    <mat-radio-button [value]="0">Male</mat-radio-button>
+    <mat-radio-button [value]="1" [checked]="isChecked">Female</mat-radio-button>
+  </mat-radio-group>
+</div>
