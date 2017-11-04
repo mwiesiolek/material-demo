@@ -16,3 +16,10 @@
   </mat-radio-group>
 </div>
 
+<div>
+  <mat-select [(ngModel)]="color">
+    <mat-option
+      *ngFor="let item of items"
+      [value]="item.id">{{ item.title }}</mat-option>
+  </mat-select>
+</div>
