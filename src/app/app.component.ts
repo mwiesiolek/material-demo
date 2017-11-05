@@ -14,7 +14,6 @@ export class AppComponent {
     {id: 3, title: 'item3'},
   ];
   color = 2;
-  picker: any;
 
   onChange($event) {
     console.log($event);
