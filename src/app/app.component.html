@@ -55,8 +55,14 @@
 
 <div>
   <mat-form-field>
-    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+    <input
+      (focus)="picker.open()"
+      matInput
+      [matDatepicker]="picker"
+      placeholder="Choose a date"
+      [min]="minDate"
+      [max]="maxDate" />
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
+    <mat-datepicker #picker touchUi="true"></mat-datepicker>
   </mat-form-field>
 </div>

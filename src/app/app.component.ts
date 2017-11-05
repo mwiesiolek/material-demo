@@ -14,6 +14,8 @@ export class AppComponent {
     {id: 3, title: 'item3'},
   ];
   color = 2;
+  minDate = new Date(2017, 1, 1);
+  maxDate = new Date(2017, 8, 1)
 
   onChange($event) {
     console.log($event);
