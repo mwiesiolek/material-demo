@@ -48,6 +48,8 @@ export class AppComponent {
   }
 
   openDialog() {
-    this.dialog.open(EditCourseComponent);
+    this.dialog.open(EditCourseComponent)
+      .afterClosed()
+      .subscribe(r => { console.log(r); });
   }
 }
