@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {MatDialog} from "@angular/material";
+import {EditCourseComponent} from "./edit-course/edit-course.component";
 
 @Component({
   selector: 'app-root',
@@ -26,7 +28,7 @@ export class AppComponent {
   progress = 0;
   timer;
 
-  constructor() {
+  constructor(private dialog: MatDialog) {
     this.timer = setInterval(() => {
       this.progress += 10;
       if(this.progress == 100) clearInterval(this.timer);
@@ -43,5 +45,9 @@ export class AppComponent {
       .forEach(c => c['selected'] = false);
 
     category.selected = !category.selected;
+  }
+
+  openDialog() {
+    this.dialog.open(EditCourseComponent);
   }
 }
