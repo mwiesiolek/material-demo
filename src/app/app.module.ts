@@ -8,7 +8,7 @@ import {
   MatSelectModule,
   MatInputModule,
   MatFormFieldModule, MatDatepickerModule, MatNativeDateModule, MatIconModule, MatButtonModule, MatChipsModule,
-  MatProgressSpinnerModule, MatTooltipModule
+  MatProgressSpinnerModule, MatTooltipModule, MatTabsModule
 } from "@angular/material";
 import {FormsModule} from "@angular/forms";
 
@@ -31,7 +31,8 @@ import {FormsModule} from "@angular/forms";
     MatButtonModule,
     MatChipsModule,
     MatProgressSpinnerModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,3 +5,7 @@ div {
 .full-width {
   width: 100%;
 }
+
+.tab-content {
+  padding: 20px;
+}
