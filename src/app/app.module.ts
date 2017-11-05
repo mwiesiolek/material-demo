@@ -8,10 +8,10 @@ import {
   MatSelectModule,
   MatInputModule,
   MatFormFieldModule, MatDatepickerModule, MatNativeDateModule, MatIconModule, MatButtonModule, MatChipsModule,
-  MatProgressSpinnerModule, MatTooltipModule, MatTabsModule, MatDialogModule
+  MatProgressSpinnerModule, MatTooltipModule, MatTabsModule, MatDialogModule, MAT_DIALOG_DATA
 } from "@angular/material";
 import {FormsModule} from "@angular/forms";
-import { EditCourseComponent } from './edit-course/edit-course.component';
+import {EditCourseComponent} from './edit-course/edit-course.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +41,9 @@ import { EditCourseComponent } from './edit-course/edit-course.component';
     MatDialogModule
 
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_DIALOG_DATA, useValue: {} }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

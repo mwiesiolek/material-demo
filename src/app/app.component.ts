@@ -48,7 +48,9 @@ export class AppComponent {
   }
 
   openDialog() {
-    this.dialog.open(EditCourseComponent)
+    this.dialog.open(EditCourseComponent, {
+      data: { courseId: 1 }
+    })
       .afterClosed()
       .subscribe(r => { console.log(r); });
   }
