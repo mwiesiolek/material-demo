@@ -78,3 +78,14 @@
   <button color="warn" mat-raised-button>Warn</button>
   <button color="primary" mat-fab><mat-icon>check</mat-icon></button>
 </div>
+
+<div>
+  <mat-chip-list>
+    <mat-chip
+      selected="true"
+      color="accent"
+      *ngFor="let category of categories"
+      (click)="selectCategory(category)"
+      [selected]="category.selected">{{ category.name }}</mat-chip>
+  </mat-chip-list>
+</div>
