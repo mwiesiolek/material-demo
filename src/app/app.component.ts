@@ -23,6 +23,16 @@ export class AppComponent {
     {name: 'Advanced'},
   ];
 
+  progress = 0;
+  timer;
+
+  constructor() {
+    this.timer = setInterval(() => {
+      this.progress += 10;
+      if(this.progress == 100) clearInterval(this.timer);
+    }, 500);
+  }
+
   onChange($event) {
     console.log($event);
   }
